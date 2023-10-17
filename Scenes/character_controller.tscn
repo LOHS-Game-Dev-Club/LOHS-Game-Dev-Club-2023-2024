@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://g8x2dedfpthj"]
+
+[ext_resource type="Script" path="res://Character_Controller.gd" id="1_t6fi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kswsw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yxu"]
+
+[node name="Character Controller" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(2.625, 2.625)
+motion_mode = 1
+script = ExtResource("1_t6fi2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_kswsw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
+scale = Vector2(18.32, 18.32)
+texture = SubResource("PlaceholderTexture2D_u4yxu")
